@@ -1,0 +1,86 @@
+---
+import '../styles/global.css'
+import SizleMark from '../components/SizleMark.astro'
+import { SUPPORT_EMAIL } from '../legal-config'
+
+interface Props {
+  title: string
+  appName: string
+  lastUpdated: string
+  description?: string
+  contentSurface?: boolean
+  showHomeLink?: boolean
+}
+
+const {
+  title,
+  appName,
+  lastUpdated,
+  description,
+  contentSurface = true,
+  showHomeLink = true,
+} = Astro.props
+const homeHref = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`
+const pageTitle = `${title} | ${appName}`
+const supportHref = `mailto:${SUPPORT_EMAIL}`
+const iconHref = `${homeHref}sizle-icon.png`
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description ?? pageTitle} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href={iconHref} />
+    <link rel="apple-touch-icon" href={iconHref} />
+    <link rel="shortcut icon" href={iconHref} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <div class="site-shell">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="brand-link" href={homeHref} aria-label="Sizle legal directory">
+          <SizleMark class="brand-mark" />
+          <span class="brand-copy">
+            <strong>Sizle</strong>
+            <small>Digital Product Studio</small>
+          </span>
+        </a>
+        <a class="support-link" href={supportHref}>Contact support</a>
+      </nav>
+
+      <header class="legal-header">
+        {showHomeLink && <a class="home-link" href={homeHref}>Back to directory</a>}
+        <p class="app-name">{appName}</p>
+        <h1>{title}</h1>
+        {description && <p class="description">{description}</p>}
+        <p class="updated">Last updated: <time datetime="2026-05-19">{lastUpdated}</time></p>
+      </header>
+
+      <main id="content" class:list={['legal-content', { 'legal-content--surface': contentSurface }]}>
+        <slot />
+      </main>
+
+      <footer class="footer">
+        <div class="footer-brand">
+          <span class="footer-mark" aria-hidden="true">
+            <SizleMark size={22} title="Sizle" />
+          </span>
+          <div>
+            <strong>Sizle Digital Product Studio</strong>
+            <p>
+              This legal directory is published and maintained by Sizle for its apps and products.
+            </p>
+          </div>
+        </div>
+        <p class="footer-contact">
+          Contact: <a href={supportHref}>{SUPPORT_EMAIL}</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

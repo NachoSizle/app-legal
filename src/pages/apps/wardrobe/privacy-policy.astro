@@ -1,0 +1,145 @@
+---
+import LegalLayout from '../../../layouts/LegalLayout.astro'
+import { APPS, LAST_UPDATED, SUPPORT_EMAIL } from '../../../legal-config'
+
+const app = APPS[0]
+---
+
+<LegalLayout
+  title="Privacy Policy"
+  appName={app.name}
+  lastUpdated={LAST_UPDATED}
+  description="How Wardrobe handles app data, photos, account information, purchases, location, and support requests."
+>
+  <h2>1. Introduction</h2>
+  <p>
+    This Privacy Policy explains how Wardrobe handles information when you use the app. Wardrobe is
+    designed as a personal wardrobe, outfit planning, wishlist, and style-tracking app. This page is
+    a practical transparency document and does not replace professional legal advice.
+  </p>
+
+  <h2>2. Information We Collect</h2>
+  <p>
+    Wardrobe may collect and store information you choose to add to the app, including wardrobe
+    items, item names, categories, brands, colors, notes, barcodes, purchase prices, wishlist target
+    prices, product links, photos of clothing, outfits, wear logs, style preferences, trip plans,
+    destination names, dates, recommendation feedback, notification preferences, and profile details
+    such as name, email, birthday, avatar symbol, and optional profile photo.
+  </p>
+  <p>
+    If you create or sign in to an account, Wardrobe may process account information such as email
+    address, authentication status, and a provider user identifier. Passwords and verification flows
+    are handled by the authentication provider rather than being stored directly by Wardrobe.
+  </p>
+  <p>
+    If you use the Safari share extension, Wardrobe may temporarily store product information from
+    the page you shared, such as product URL, suggested name, brand, image URL, price text, currency,
+    color, and capture time. This is used to prefill wishlist items.
+  </p>
+  <p>
+    If you use camera, photo library, location, notifications, widgets, backups, or purchase
+    features, the app and Apple platform services may process the information required to provide
+    those features.
+  </p>
+
+  <h2>3. How We Use Information</h2>
+  <p>
+    Wardrobe uses information to save your wardrobe, build outfit suggestions, track wears, maintain
+    wishlist items, generate style statistics, personalize weather-aware recommendations, prepare
+    trip outfit plans, show widgets, schedule reminders you enable, manage account access, process
+    Pro entitlements, respond to support requests, and maintain app reliability.
+  </p>
+
+  <h2>4. Local Storage, Backups, and Shared App Data</h2>
+  <p>
+    Wardrobe stores core wardrobe data on your device using Apple platform storage. The app also
+    uses an Apple App Group to share limited data with the widget and share extension, such as the
+    look-of-the-day cache, widget thumbnails, and pending wishlist share payloads.
+  </p>
+  <p>
+    Wardrobe includes a manual backup feature that exports your wardrobe data to a JSON file. The
+    backup can include item photos encoded inside the file. You choose where to save or share that
+    backup, such as Files, iCloud Drive, AirDrop, or another destination.
+  </p>
+
+  <h2>5. Permissions and Device Features</h2>
+  <p>
+    Wardrobe may request access to your photo library so you can choose garment and profile photos,
+    camera access so you can scan barcodes or capture item-related content, location access so
+    weather-aware recommendations can reflect local conditions, and notification permission so
+    reminders and planning nudges can be scheduled. You can manage these permissions in iOS Settings.
+  </p>
+
+  <h2>6. Third-Party Services</h2>
+  <p>
+    Wardrobe uses Apple services such as StoreKit for purchases and subscriptions, WeatherKit for
+    weather-aware recommendations, Photos, Camera, Notifications, Widgets, and App Groups where
+    enabled by the operating system.
+  </p>
+  <p>
+    Wardrobe uses Firebase for account and backend functionality. Firebase Authentication and
+    related Firebase services may process account, authentication, and app data needed to create
+    accounts, sign users in, verify email addresses, reset passwords, update passwords, delete
+    accounts, and support synced or backend-backed app features. Firebase Analytics is disabled in
+    the app configuration reviewed for this policy.
+  </p>
+  <p>
+    If you use the share extension or product image preview features, Wardrobe may request image
+    data from the product URL or image URL associated with the page you shared.
+  </p>
+
+  <h2>7. In-App Purchases and Subscriptions</h2>
+  <p>
+    Wardrobe may offer Pro features through monthly, yearly, or lifetime in-app purchases. Purchases
+    and subscriptions are processed through Apple&apos;s App Store using StoreKit. Apple handles
+    payment details, billing, subscription management, cancellations, and refund requests. Wardrobe
+    receives purchase entitlement information, such as product identifiers and transaction status,
+    but does not receive full payment card details.
+  </p>
+
+  <h2>8. Data Retention</h2>
+  <p>
+    Local wardrobe data remains on your device until you delete it, delete your account from within
+    the app where available, uninstall the app, reset the device, or otherwise remove the data.
+    Manual backup files remain wherever you choose to store them until you delete them.
+  </p>
+  <p>
+    Account, purchase, and provider-side technical data may be retained by Apple, Firebase, or other
+    involved service providers according to their own policies and legal obligations.
+  </p>
+
+  <h2>9. User Rights and Privacy Requests</h2>
+  <p>
+    Depending on your location, you may have rights to access, correct, delete, export, restrict, or
+    object to certain uses of personal information. You can delete local wardrobe content in the app
+    and, where account deletion is available, request deletion of the remote account from the app.
+    You can also contact us for privacy requests using the email below.
+  </p>
+
+  <h2>10. Security</h2>
+  <p>
+    Wardrobe relies on Apple platform security, local device protections, and provider security
+    controls for account and purchase services. No method of storage or transmission is completely
+    secure, so you should protect your device, Apple ID, and any exported backup files.
+  </p>
+
+  <h2>11. Children&apos;s Privacy</h2>
+  <p>
+    Wardrobe is not directed to children under the age where parental consent is required by
+    applicable law. If you believe a child has provided personal information through Wardrobe,
+    contact us so we can review the request.
+  </p>
+
+  <h2>12. Changes to This Policy</h2>
+  <p>
+    This Privacy Policy may be updated from time to time. The latest version will be posted on this
+    page with an updated date.
+  </p>
+
+  <h2>13. Contact</h2>
+  <p>
+    For privacy questions, data requests, or deletion requests, contact <a
+      href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a
+    >.
+  </p>
+</LegalLayout>

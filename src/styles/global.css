@@ -1,0 +1,391 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Satoshi, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  color: #1d2939;
+  background: #f8fafc;
+  --brand-midnight: #0a0f1e;
+  --brand-deep-slate: #121827;
+  --brand-graphite: #1a2233;
+  --brand-blue: #2563eb;
+  --brand-cyan: #06b6d4;
+  --brand-violet: #7c3aed;
+  --brand-cool-gray: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(180deg, #ffffff 0, #f8fafc 280px),
+    #f8fafc;
+}
+
+a {
+  color: var(--brand-blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #0b3b91;
+}
+
+a:focus-visible {
+  outline: 3px solid #84c5ff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 10;
+  padding: 10px 14px;
+  background: #111827;
+  color: #ffffff;
+  border-radius: 6px;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-shell {
+  width: min(100% - 32px, 840px);
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 52px;
+  padding: 12px 0;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #111827;
+  text-decoration: none;
+}
+
+.brand-mark {
+  flex: 0 0 auto;
+  filter: drop-shadow(0 6px 14px rgba(37, 99, 235, 0.18));
+}
+
+.brand-copy {
+  display: grid;
+  gap: 1px;
+  line-height: 1.1;
+}
+
+.brand-copy strong {
+  font-family:
+    "Clash Display", Satoshi, Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.04rem;
+  font-weight: 700;
+}
+
+.brand-copy small {
+  color: #667085;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.support-link {
+  padding: 8px 12px;
+  color: #344054;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.support-link:hover {
+  color: #111827;
+  border-color: #98a2b3;
+}
+
+.legal-header {
+  margin-bottom: 34px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #d7dce5;
+}
+
+.home-link {
+  display: inline-flex;
+  margin-bottom: 22px;
+  color: #475467;
+  font-size: 0.93rem;
+  font-weight: 600;
+}
+
+.app-name {
+  margin: 0 0 8px;
+  color: #667085;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #111827;
+  font-family:
+    "Clash Display", Satoshi, Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(2.15rem, 7vw, 4rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.description {
+  max-width: 700px;
+  margin: 18px 0 0;
+  color: #475467;
+  font-size: 1.08rem;
+}
+
+.updated {
+  display: inline-flex;
+  gap: 4px;
+  margin: 20px 0 0;
+  padding: 6px 10px;
+  color: #475467;
+  background: #eef2f7;
+  border: 1px solid #d7dce5;
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+.legal-content {
+  padding: 0;
+}
+
+.legal-content--surface {
+  padding: clamp(24px, 5vw, 42px);
+  background: #ffffff;
+  border: 1px solid #d7dce5;
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(16, 24, 40, 0.06);
+}
+
+.legal-content > :first-child {
+  margin-top: 0;
+}
+
+.legal-content > :last-child {
+  margin-bottom: 0;
+}
+
+.legal-content h2 {
+  margin: 36px 0 12px;
+  color: #111827;
+  font-size: 1.24rem;
+  line-height: 1.3;
+}
+
+.legal-content p,
+.legal-content li {
+  color: #344054;
+}
+
+.legal-content p {
+  margin: 0 0 16px;
+}
+
+.legal-content ul {
+  padding-left: 1.35rem;
+}
+
+.legal-content li + li {
+  margin-top: 8px;
+}
+
+.directory-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.directory-card {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #d7dce5;
+  border-radius: 8px;
+}
+
+.directory-card h2 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.22rem;
+}
+
+.directory-card p {
+  margin: 0;
+}
+
+.resource-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.resource-link {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 16px;
+  min-height: 72px;
+  padding: 14px 16px;
+  color: #1d2939;
+  background: #f8fafc;
+  border: 1px solid #d7dce5;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.resource-link:hover {
+  color: #111827;
+  background: #eef4ff;
+  border-color: #b2ccff;
+}
+
+.resource-link strong {
+  display: block;
+  color: var(--brand-blue);
+  font-size: 1rem;
+}
+
+.resource-link small {
+  display: block;
+  margin-top: 3px;
+  color: #475467;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.resource-arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  color: var(--brand-blue);
+  background: #ffffff;
+  border: 1px solid #d7dce5;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.footer {
+  display: grid;
+  gap: 18px;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid #d7dce5;
+  color: #667085;
+  font-size: 0.92rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-brand {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.footer-mark {
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: #0f172a;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+.footer-brand strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #111827;
+  font-family:
+    "Clash Display", Satoshi, Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+}
+
+.footer-contact {
+  color: #475467;
+}
+
+@media (max-width: 560px) {
+  .site-shell {
+    width: min(100% - 24px, 840px);
+    padding-top: 18px;
+  }
+
+  .site-nav {
+    margin-bottom: 34px;
+  }
+
+  .support-link {
+    padding: 7px 10px;
+    font-size: 0.88rem;
+  }
+
+  .brand-copy small {
+    display: none;
+  }
+
+  .legal-content {
+    padding: 0;
+  }
+
+  .legal-content--surface {
+    padding: 22px;
+  }
+
+  .directory-card {
+    padding: 20px;
+  }
+
+  .resource-link {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .resource-arrow {
+    justify-self: start;
+  }
+}

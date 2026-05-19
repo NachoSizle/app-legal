@@ -1,0 +1,19 @@
+---
+interface Props {
+  size?: number
+  title?: string
+  class?: string
+}
+
+const { size = 28, title = 'Sizle', class: className } = Astro.props
+const src = `${import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`}sizle-icon.png`
+---
+
+<img
+  class={className}
+  width={size}
+  height={Math.round(size * 137 / 119)}
+  src={src}
+  alt={title}
+  decoding="async"
+/>

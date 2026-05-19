@@ -1,0 +1,69 @@
+---
+import LegalLayout from '../../../layouts/LegalLayout.astro'
+import { APPS, LAST_UPDATED, SUPPORT_EMAIL } from '../../../legal-config'
+
+const app = APPS[0]
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`
+---
+
+<LegalLayout
+  title="Support"
+  appName={app.name}
+  lastUpdated={LAST_UPDATED}
+  description="Support, privacy requests, account deletion, backups, and subscription help for Wardrobe."
+>
+  <h2>Contact Support</h2>
+  <p>
+    For help with Wardrobe, contact <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+    Estimated response time is 2-5 business days.
+  </p>
+
+  <h2>Common Support Topics</h2>
+  <p>
+    Please include your device model, iOS version, Wardrobe app version if available, and a short
+    description of what happened. Do not email passwords or full payment card details.
+  </p>
+  <ul>
+    <li>Account sign-in, email verification, password reset, or account deletion.</li>
+    <li>Wardrobe data, backups, imports, photos, widgets, or share extension issues.</li>
+    <li>Camera, photo library, location, or notification permission problems.</li>
+    <li>Pro entitlement, purchase restore, subscription, or App Store billing questions.</li>
+  </ul>
+
+  <h2>Subscriptions and Purchases</h2>
+  <p>
+    Wardrobe purchases and subscriptions are processed by Apple. You can manage or cancel
+    subscriptions from your Apple ID subscription settings. Refund requests are handled through
+    Apple&apos;s refund process at <a href="https://reportaproblem.apple.com/"
+      >reportaproblem.apple.com</a
+    >.
+  </p>
+
+  <h2>Privacy and Account Deletion</h2>
+  <p>
+    For privacy questions, data access requests, correction requests, deletion requests, or account
+    deletion support, email <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>. If you use an
+    account in Wardrobe, include the email address associated with the account so we can identify
+    the request.
+  </p>
+
+  <h2>Backups and Local Data</h2>
+  <p>
+    Wardrobe can export a manual JSON backup that may include your clothing photos and wardrobe
+    details. Store backup files carefully and delete old copies when you no longer need them.
+  </p>
+
+  <h2>Legal Documents</h2>
+  <ul>
+    <li><a href={`${base}apps/${app.slug}/privacy-policy/`}>Privacy Policy</a></li>
+    <li><a href={`${base}apps/${app.slug}/terms-of-use/`}>Terms of Use</a></li>
+  </ul>
+
+  <h2>Legal Note</h2>
+  <p>
+    These documents are provided for transparency and app publication workflows. They are not a
+    substitute for legal advice from a qualified professional.
+  </p>
+</LegalLayout>

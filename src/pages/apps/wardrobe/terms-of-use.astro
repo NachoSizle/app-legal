@@ -1,0 +1,108 @@
+---
+import LegalLayout from '../../../layouts/LegalLayout.astro'
+import { APPS, LAST_UPDATED, SUPPORT_EMAIL } from '../../../legal-config'
+
+const app = APPS[0]
+---
+
+<LegalLayout
+  title="Terms of Use"
+  appName={app.name}
+  lastUpdated={LAST_UPDATED}
+  description="Terms for using Wardrobe, including accounts, local wardrobe data, Pro purchases, and Apple platform services."
+>
+  <h2>1. Acceptance of Terms</h2>
+  <p>
+    By downloading, accessing, or using Wardrobe, you agree to these Terms of Use. If you do not
+    agree, do not use the app. These terms are intended to work alongside Apple&apos;s App Store terms
+    and any mandatory consumer protection laws that apply to you.
+  </p>
+
+  <h2>2. Description of the App</h2>
+  <p>
+    Wardrobe helps you organize clothing, save garment photos and details, build outfits, track
+    wears, plan trips, maintain a wishlist, receive optional reminders, view widgets, and unlock Pro
+    features where available.
+  </p>
+
+  <h2>3. User Responsibilities</h2>
+  <p>
+    You are responsible for using Wardrobe lawfully, keeping your device and account access secure,
+    entering accurate information, keeping your backups safe, and making sure you have the right to
+    upload, store, share, or export any photos, product links, notes, or other content you add to
+    the app.
+  </p>
+
+  <h2>4. Accounts</h2>
+  <p>
+    Wardrobe may support guest mode and account-based features. If you create an account, you are
+    responsible for maintaining the confidentiality of your credentials and for activity under your
+    account. Account authentication may be provided through Firebase or another backend service used
+    by Wardrobe.
+  </p>
+
+  <h2>5. Purchases and Subscriptions</h2>
+  <p>
+    Wardrobe may offer Pro features through monthly, yearly, or lifetime purchases. All purchases
+    and subscriptions are processed through Apple&apos;s App Store. Subscription management,
+    cancellations, and refund requests are handled through the user&apos;s Apple ID account and
+    Apple&apos;s App Store settings.
+  </p>
+
+  <h2>6. Cancellation and Refunds</h2>
+  <p>
+    You can manage or cancel Apple-billed subscriptions through your Apple ID subscription settings.
+    Refund requests are handled by Apple according to Apple&apos;s App Store policies and applicable
+    consumer law. Wardrobe cannot directly cancel Apple-billed subscriptions or issue App Store
+    refunds outside Apple&apos;s process.
+  </p>
+
+  <h2>7. Your Content and Backups</h2>
+  <p>
+    You keep ownership of the wardrobe content you add to the app, such as garment photos, item
+    details, outfits, wear logs, wishlist links, and backup files. You grant Wardrobe the limited
+    permission needed to store, display, process, and export that content so the app can provide its
+    features.
+  </p>
+  <p>
+    Manual backup files can contain your wardrobe data and photos. You are responsible for where you
+    save, share, or transmit those files.
+  </p>
+
+  <h2>8. Recommendations, Weather, and External Content</h2>
+  <p>
+    Outfit suggestions, weather-aware recommendations, stats, style summaries, and trip plans are
+    provided for convenience and general informational use. They may be incomplete, unavailable, or
+    inaccurate. Product pages, retailer websites, product images, and external services accessed
+    through links or the share extension are controlled by third parties.
+  </p>
+
+  <h2>9. Intellectual Property</h2>
+  <p>
+    The app, its content, design, branding, and related materials are protected by intellectual
+    property laws. You may not copy, modify, distribute, or reverse engineer the app except where
+    permitted by applicable law.
+  </p>
+
+  <h2>10. Availability and Changes</h2>
+  <p>
+    Wardrobe may be updated, changed, suspended, or discontinued at any time. Features may vary by
+    platform, device, operating system version, App Store availability, network availability, and
+    account or purchase status.
+  </p>
+
+  <h2>11. Limitation of Liability</h2>
+  <p>
+    To the maximum extent permitted by law, the app is provided as is and without warranties of any
+    kind. We are not liable for indirect, incidental, consequential, or special damages arising from
+    use of the app, including loss of data, loss of wardrobe records, lost backup files, purchase
+    issues handled by Apple, or reliance on recommendations.
+  </p>
+
+  <h2>12. Contact</h2>
+  <p>
+    For questions about these Terms of Use, contact <a href={`mailto:${SUPPORT_EMAIL}`}
+      >{SUPPORT_EMAIL}</a
+    >.
+  </p>
+</LegalLayout>
