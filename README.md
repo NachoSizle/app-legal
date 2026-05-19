@@ -6,18 +6,18 @@ Live site:
 
 - https://nachosizle.github.io/app-legal/
 
-Wardrobe:
+Wardrobe Studio:
 
-- https://nachosizle.github.io/app-legal/apps/wardrobe/privacy-policy/
-- https://nachosizle.github.io/app-legal/apps/wardrobe/terms-of-use/
-- https://nachosizle.github.io/app-legal/apps/wardrobe/support/
+- https://nachosizle.github.io/app-legal/apps/wardrobe-studio/privacy-policy/
+- https://nachosizle.github.io/app-legal/apps/wardrobe-studio/terms-of-use/
+- https://nachosizle.github.io/app-legal/apps/wardrobe-studio/support/
 
 ## Legal consistency checklist
 
-The App Store Connect privacy answers for Wardrobe must remain consistent with the published
+The App Store Connect privacy answers for Wardrobe Studio must remain consistent with the published
 Privacy Policy.
 
-When Wardrobe changes any of the following, update both the legal pages and App Store Connect:
+When Wardrobe Studio changes any of the following, update both the legal pages and App Store Connect:
 
 - Data collection
 - Sign in providers
