@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css'
 import SizleMark from '../components/SizleMark.astro'
-import { SUPPORT_EMAIL } from '../legal-config'
+import { LAST_UPDATED_ISO, SUPPORT_EMAIL } from '../legal-config'
 
 interface Props {
   title: string
@@ -58,7 +58,9 @@ const iconHref = `${homeHref}sizle-icon.png`
         <p class="app-name">{appName}</p>
         <h1>{title}</h1>
         {description && <p class="description">{description}</p>}
-        <p class="updated">Last updated: <time datetime="2026-05-19">{lastUpdated}</time></p>
+        <p class="updated">
+          Last updated: <time datetime={LAST_UPDATED_ISO}>{lastUpdated}</time>
+        </p>
       </header>
 
       <main id="content" class:list={['legal-content', { 'legal-content--surface': contentSurface }]}>

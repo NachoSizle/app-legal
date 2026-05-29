@@ -12,12 +12,18 @@ Wardrobe Studio:
 - https://nachosizle.github.io/app-legal/apps/wardrobe-studio/terms-of-use/
 - https://nachosizle.github.io/app-legal/apps/wardrobe-studio/support/
 
+GymMate:
+
+- https://nachosizle.github.io/app-legal/apps/gymmate/privacy-policy/
+- https://nachosizle.github.io/app-legal/apps/gymmate/terms-of-use/
+- https://nachosizle.github.io/app-legal/apps/gymmate/support/
+
 ## Legal consistency checklist
 
-The App Store Connect privacy answers for Wardrobe Studio must remain consistent with the published
-Privacy Policy.
+The App Store Connect privacy answers for each app must remain consistent with the published
+Privacy Policy and Terms of Use.
 
-When Wardrobe Studio changes any of the following, update both the legal pages and App Store Connect:
+When an app changes any of the following, update both the legal pages and App Store Connect:
 
 - Data collection
 - Sign in providers
@@ -26,13 +32,15 @@ When Wardrobe Studio changes any of the following, update both the legal pages a
 - Crash reporting
 - In-app purchases
 - Subscriptions
+- Apple Health or fitness data usage
+- AI providers or AI-assisted features
 - WeatherKit usage
 - Location usage
 - Account deletion
 - Backup/export behavior
 
-TODO for the iOS app: make sure Weather attribution and data source links are displayed wherever
-WeatherKit data is shown.
+TODO for the Wardrobe Studio iOS app: make sure Weather attribution and data source links are
+displayed wherever WeatherKit data is shown.
 
 ## Legal Note
 

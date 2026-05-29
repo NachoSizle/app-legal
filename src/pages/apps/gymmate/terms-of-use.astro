@@ -1,0 +1,161 @@
+---
+import LegalLayout from '../../../layouts/LegalLayout.astro'
+import { getAppBySlug, LAST_UPDATED, SUPPORT_EMAIL } from '../../../legal-config'
+
+const app = getAppBySlug('gymmate')
+---
+
+<LegalLayout
+  title="Terms of Use"
+  appName={app.name}
+  lastUpdated={LAST_UPDATED}
+  description="Terms for using GymMate, including accounts, training data, Apple Health features, AI parsing, notifications, and availability."
+>
+  <h2>1. Acceptance of Terms</h2>
+  <p>
+    By downloading, accessing, or using GymMate, you agree to these Terms of Use. If you do not
+    agree, do not use the app. These Terms are in addition to, and do not replace, Apple&apos;s
+    standard terms that apply to apps distributed through the App Store.
+  </p>
+  <p>
+    GymMate is developed and maintained by Nacho Martínez, operating under the Sizle Digital Product
+    Studio brand.
+  </p>
+
+  <h2>2. Description of the App</h2>
+  <p>
+    GymMate helps you plan training programs, log workouts, track progress, review statistics, manage
+    warm-ups, use timers, export training data, receive optional reminders, and use Apple Watch or
+    Apple Health features where available.
+  </p>
+
+  <h2>3. Accounts and Sign-In</h2>
+  <p>
+    GymMate uses account-backed features through Supabase. You may be able to sign in using email and
+    password, Sign in with Apple, Google sign-in, or other supported methods shown in the app. You
+    are responsible for keeping your device, account, and credentials secure.
+  </p>
+  <p>
+    If you use Sign in with Apple, your account access is subject to Apple&apos;s sign-in flow and
+    your Apple ID settings. If you use Google sign-in, your account access is also subject to
+    Google&apos;s sign-in flow and account settings.
+  </p>
+
+  <h2>4. User Responsibilities</h2>
+  <p>
+    You are responsible for using GymMate lawfully, entering accurate information, keeping backups
+    safe, and making sure you have the right to upload, store, share, or export any program text,
+    notes, workout data, or other content you add to the app.
+  </p>
+  <p>
+    You must not use GymMate to abuse the service, interfere with availability, bypass rate limits,
+    misuse AI parsing, attempt unauthorized access, or upload content that violates applicable law or
+    third-party rights.
+  </p>
+
+  <h2>5. Fitness, Health, and Safety</h2>
+  <p>
+    GymMate is provided for personal fitness organization and convenience. It is not medical advice,
+    professional coaching, diagnosis, treatment, injury-prevention guidance, or a substitute for a
+    qualified health, fitness, or medical professional.
+  </p>
+  <p>
+    You are responsible for exercising safely, using proper technique, choosing suitable weights and
+    exercises, stopping when needed, and consulting a qualified professional before starting or
+    changing a training program if you have health concerns, injuries, or medical conditions.
+  </p>
+
+  <h2>6. Apple Health and Apple Watch</h2>
+  <p>
+    Apple Health, Apple Watch, Live Activity, widget, and notification features depend on device
+    support, operating system permissions, Apple services, and your settings. Health and workout data
+    shown by GymMate may be delayed, incomplete, or unavailable.
+  </p>
+  <p>
+    You control Apple Health permissions through iOS and watchOS. GymMate is not responsible for
+    Apple Health availability, Apple Watch connectivity, sensor accuracy, or decisions made based on
+    device sensor data.
+  </p>
+
+  <h2>7. AI-Assisted Program Parsing</h2>
+  <p>
+    GymMate may offer AI-assisted parsing to convert workout text into structured programs. AI output
+    can be incomplete, inaccurate, or unsuitable for your goals or health status. You are responsible
+    for reviewing and editing any AI-generated or AI-parsed program before using it.
+  </p>
+  <p>
+    AI parsing is subject to rate limits and may be changed, limited, suspended, or removed at any
+    time to protect service reliability.
+  </p>
+
+  <h2>8. Your Content, Sync, and Exports</h2>
+  <p>
+    You keep ownership of the training content you add to GymMate, such as programs, exercises,
+    workout logs, notes, body weight entries, warm-ups, and exports. You grant GymMate the limited
+    permission needed to store, process, sync, display, analyze, and export that content so the app
+    can provide its features.
+  </p>
+  <p>
+    GymMate uses local storage and account-backed sync. Offline changes may remain on your device
+    until connectivity returns. Exported files may contain personal training and health-related
+    information, and you are responsible for where you save, share, or transmit those files.
+  </p>
+
+  <h2>9. Notifications</h2>
+  <p>
+    Reminders, weekly summaries, streak nudges, progress messages, push notifications, widgets, and
+    Live Activities are optional convenience features. They may be delayed, unavailable, or affected
+    by operating system settings, network availability, battery settings, or provider limitations.
+  </p>
+
+  <h2>10. Purchases and Subscriptions</h2>
+  <p>
+    If GymMate offers paid plans, Pro features, in-app purchases, or subscriptions, the specific
+    features, price, billing period, renewal terms, and any trial terms will be shown in the app
+    before purchase. Apple-billed purchases, if offered, are processed through Apple&apos;s App Store.
+  </p>
+  <p>
+    Subscription management, cancellations, and refund requests for Apple-billed purchases are
+    handled through the user&apos;s Apple ID account and Apple&apos;s App Store settings. GymMate
+    cannot directly cancel Apple-billed subscriptions or issue App Store refunds outside
+    Apple&apos;s process.
+  </p>
+
+  <h2>11. Account Deletion</h2>
+  <p>
+    GymMate provides a way to request or initiate account deletion from within the app where
+    available, subject to verification and legal retention requirements. Deleting the app may remove
+    local app data from your device, but it may not automatically delete account-backed records,
+    provider-side records, exported files, or copies you have saved elsewhere.
+  </p>
+
+  <h2>12. Intellectual Property</h2>
+  <p>
+    The app, its design, branding, code, templates, and related materials are protected by
+    intellectual property laws. You may not copy, modify, distribute, or reverse engineer the app
+    except where permitted by applicable law.
+  </p>
+
+  <h2>13. Availability and Changes</h2>
+  <p>
+    GymMate may be updated, changed, suspended, or discontinued at any time. Features may vary by
+    platform, device, operating system version, App Store availability, network availability, account
+    status, provider availability, or configuration.
+  </p>
+
+  <h2>14. Limitation of Liability</h2>
+  <p>
+    To the maximum extent permitted by law, GymMate is provided as is and without warranties of any
+    kind. We are not liable for indirect, incidental, consequential, or special damages arising from
+    use of the app, including injuries, training decisions, data loss, missed notifications, failed
+    sync, unavailable exports, Apple Health issues, AI parsing errors, or reliance on app-generated
+    recommendations and summaries.
+  </p>
+
+  <h2>15. Contact</h2>
+  <p>
+    For questions about these Terms of Use, contact <a href={`mailto:${SUPPORT_EMAIL}`}
+      >{SUPPORT_EMAIL}</a
+    >.
+  </p>
+</LegalLayout>

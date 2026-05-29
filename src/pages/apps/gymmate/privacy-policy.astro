@@ -1,0 +1,187 @@
+---
+import LegalLayout from '../../../layouts/LegalLayout.astro'
+import { getAppBySlug, LAST_UPDATED, SUPPORT_EMAIL } from '../../../legal-config'
+
+const app = getAppBySlug('gymmate')
+---
+
+<LegalLayout
+  title="Privacy Policy"
+  appName={app.name}
+  lastUpdated={LAST_UPDATED}
+  description="How GymMate handles account data, training records, Apple Health data, analytics, AI parsing, notifications, and privacy requests."
+>
+  <h2>1. Introduction</h2>
+  <p>
+    This Privacy Policy explains how GymMate handles information when you use the app. GymMate is a
+    training companion for planning workouts, logging exercise performance, tracking progress,
+    managing reminders, and reviewing training history.
+  </p>
+  <p>
+    GymMate is developed and maintained by Nacho Martínez, operating under the Sizle Digital Product
+    Studio brand.
+  </p>
+
+  <h2>2. Information You Add or Create</h2>
+  <p>
+    GymMate stores the following information when you choose to add or create it: account email,
+    display name, height, body weight entries, target weight, training goals, experience level,
+    available training days, training programs, training days, exercises, sets, reps, weights used,
+    completed values, workout dates, workout duration, warm-up exercises, notes, achievements,
+    onboarding progress, guided tour status, notification preferences, and exported training files.
+  </p>
+  <p>
+    Some of this information may be health or fitness-related because it describes your workouts,
+    physical metrics, training habits, and progress. You should avoid adding information that you do
+    not want stored or processed by the app.
+  </p>
+
+  <h2>3. Information Processed by Optional Features</h2>
+  <p>
+    GymMate may process the following information only when you enable or use the related feature:
+    Sign in with Apple or Google sign-in information, Apple Health and Apple Watch workout data,
+    push notification subscriptions, local notification settings, device and browser information,
+    product analytics events, crash and error diagnostics, AI program parsing input, offline sync
+    queue data, exported files, and share sheet data.
+  </p>
+  <p>
+    If you use Sign in with Apple, Apple may provide GymMate with your name, email address, private
+    relay email address, and provider identifier depending on your Apple ID choices. If you use
+    Google sign-in, Google may provide account identifiers and profile information needed to sign in.
+    This information is used to create or access your GymMate account and provide account-related
+    functionality.
+  </p>
+
+  <h2>4. Local Storage, Sync, and Backups</h2>
+  <p>
+    GymMate uses local device storage, including IndexedDB or platform storage, so the app can work
+    quickly and support offline-first workflows. Training changes made offline may be queued locally
+    and synced with Supabase when connectivity returns.
+  </p>
+  <p>
+    Account-backed training data is stored and synced with Supabase so your account, programs,
+    workout logs, body weight entries, achievements, notification settings, push subscriptions, and
+    related records can be available across sessions and devices where supported.
+  </p>
+  <p>
+    Exported files may include training programs, exercise details, workout history, body metrics,
+    notes, achievements, notification settings, and account-related records. Anyone with access to an
+    exported file may be able to view the information contained in it. Keep exported files in a safe
+    location and avoid sharing them with people you do not trust.
+  </p>
+
+  <h2>5. Apple Health, Apple Watch, and Fitness Data</h2>
+  <p>
+    If you use Apple Health or Apple Watch features and grant permission, GymMate may read heart rate,
+    active energy, workout, and related workout session data during training so it can display and
+    synchronize workout information. GymMate may also write workout sessions and active energy data
+    to Apple Health when you allow it.
+  </p>
+  <p>
+    Apple Health access is controlled by iOS and watchOS permission settings. You can deny or revoke
+    Health access and continue using GymMate, although Apple Health or Apple Watch features may be
+    limited.
+  </p>
+
+  <h2>6. How We Use Information</h2>
+  <p>
+    GymMate uses information to create and manage your account, save workout programs, log training
+    sessions, calculate progress, show charts and summaries, support offline sync, generate
+    achievements, send reminders you enable, export your data, provide support, protect the service,
+    and maintain app reliability.
+  </p>
+  <p>
+    GymMate does not use third-party advertising SDKs and does not sell personal information.
+    GymMate does not use your data to track you across apps or websites owned by other companies.
+  </p>
+
+  <h2>7. Analytics and Error Monitoring</h2>
+  <p>
+    GymMate may use PostHog for product analytics. In the web/PWA experience, analytics depend on
+    consent. On native platforms, consent may be treated as accepted by the app configuration. PostHog
+    autocapture is disabled, and analytics events are intended to measure product usage such as
+    onboarding, workout logging, navigation, performance, and feature adoption.
+  </p>
+  <p>
+    GymMate may use Sentry for crash and error monitoring when configured. Error reports may include
+    technical diagnostics such as app version, environment, device or browser information, route
+    context, stack traces, and account identifiers needed to debug reliability issues.
+  </p>
+
+  <h2>8. AI Program Parsing</h2>
+  <p>
+    If you use AI-assisted program parsing, the workout text you submit is sent to a Supabase Edge
+    Function and processed using Google Gemini to convert that text into a structured training
+    program. GymMate also records limited rate-limit information, such as your user identifier and
+    request time, to prevent abuse.
+  </p>
+  <p>
+    Do not submit sensitive information in AI parsing prompts unless you are comfortable with that
+    information being processed for this feature.
+  </p>
+
+  <h2>9. Notifications</h2>
+  <p>
+    If you enable notifications, GymMate may store notification preferences, reminder times, weekly
+    summary settings, push subscription endpoints, device names, user agents, delivery status, and
+    notification logs. You can manage notification permissions in iOS Settings or browser settings
+    and notification preferences inside the app where available.
+  </p>
+
+  <h2>10. Third-Party Services</h2>
+  <p>
+    GymMate uses Supabase for authentication, database storage, sync, account deletion, data export,
+    Edge Functions, and push-notification-related records. GymMate may use Apple services such as
+    Sign in with Apple, Apple Health, Apple Watch, Live Activities, widgets, share sheets, and
+    notifications where enabled by the operating system.
+  </p>
+  <p>
+    GymMate may use Google sign-in and Google Gemini for the optional AI parsing feature. GymMate may
+    use PostHog for analytics and Sentry for crash/error monitoring as described above.
+  </p>
+
+  <h2>11. Purchases and Subscriptions</h2>
+  <p>
+    GymMate does not receive full payment card details. If paid plans, in-app purchases, or
+    subscriptions are offered in the future, the specific features, price, billing period, renewal
+    terms, and cancellation information will be shown before purchase. Apple-billed purchases, if
+    offered, are processed through Apple&apos;s App Store.
+  </p>
+
+  <h2>12. Data Retention</h2>
+  <p>
+    Local data remains on your device until you delete it, sign out where local cleanup occurs,
+    uninstall the app, reset the device, clear browser storage, or otherwise remove the data.
+    Account-backed data is retained while your account is active unless deleted through account
+    deletion, data management tools, or support requests, subject to verification, backups, security,
+    and legal retention requirements.
+  </p>
+
+  <h2>13. User Rights and Privacy Requests</h2>
+  <p>
+    Depending on your location, you may have rights to access, correct, delete, export, restrict, or
+    object to certain uses of personal information. GymMate provides account deletion and data export
+    functionality where available. You can also contact support for privacy requests using the email
+    below.
+  </p>
+
+  <h2>14. Children&apos;s Privacy</h2>
+  <p>
+    GymMate is not directed to children under the age where parental consent is required by
+    applicable law. If you believe a child has provided personal information through GymMate, contact
+    us so we can review the request.
+  </p>
+
+  <h2>15. Changes to This Policy</h2>
+  <p>
+    This Privacy Policy may be updated from time to time. The latest version will be posted on this
+    page with an updated date.
+  </p>
+
+  <h2>16. Contact</h2>
+  <p>
+    For privacy questions, data requests, export requests, or deletion requests, contact <a
+      href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a
+    >.
+  </p>
+</LegalLayout>

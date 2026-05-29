@@ -1,0 +1,98 @@
+---
+import LegalLayout from '../../../layouts/LegalLayout.astro'
+import { getAppBySlug, LAST_UPDATED, SUPPORT_EMAIL } from '../../../legal-config'
+
+const app = getAppBySlug('gymmate')
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`
+---
+
+<LegalLayout
+  title="Support"
+  appName={app.name}
+  lastUpdated={LAST_UPDATED}
+  description="Support, privacy requests, account deletion, data export, Apple Health, notifications, and account help for GymMate."
+>
+  <h2>Contact Support</h2>
+  <p>
+    For help with GymMate, contact <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+    Estimated response time is 2-5 business days.
+  </p>
+  <p>
+    GymMate is developed and maintained by Nacho Martínez, operating under the Sizle Digital Product
+    Studio brand.
+  </p>
+  <p>Suggested subject: GymMate Support Request</p>
+
+  <h2>What to Include</h2>
+  <p>
+    Please include your device model, operating system version, GymMate app version if available, the
+    sign-in method you used, and a short description of what happened. Do not email passwords, full
+    payment card details, private health records, or recovery codes.
+  </p>
+  <p>
+    If you signed in with Apple and used a private relay email address, please contact support from
+    that relay address or include enough information to identify your account.
+  </p>
+
+  <h2>Common Support Topics</h2>
+  <ul>
+    <li>Account sign-in, email verification, password reset, or account deletion.</li>
+    <li>Training programs, exercises, workout logs, body weight entries, achievements, and stats.</li>
+    <li>Offline sync, exported files, data import or export, and local storage issues.</li>
+    <li>Apple Health, Apple Watch, Live Activities, widgets, timers, and notifications.</li>
+    <li>AI-assisted program parsing, parsing limits, or incorrect parsed programs.</li>
+    <li>Analytics consent, privacy requests, or data access requests.</li>
+  </ul>
+
+  <h2>Account Deletion and Data Export</h2>
+  <p>
+    If you created an account, use the in-app account deletion option where available or contact
+    support for assistance. GymMate may ask for verification before processing deletion requests.
+  </p>
+  <p>
+    Deleting the app may remove local app data from your device, but it may not automatically delete
+    account-backed records, provider-side records, exported files, or copies stored elsewhere.
+  </p>
+  <p>
+    GymMate provides data export functionality where available. Exported files may include training
+    programs, workout logs, body metrics, notes, achievements, notification settings, and other
+    account-related records. Keep exported files in a safe location and avoid sharing them with
+    people you do not trust.
+  </p>
+
+  <h2>Apple Health, Apple Watch, and Notifications</h2>
+  <p>
+    Apple Health and Apple Watch features require permissions managed by iOS and watchOS. You can
+    review or revoke Health permissions in iOS Settings or the Health app. Notification permissions
+    can be managed in iOS Settings or browser settings, and notification preferences can be adjusted
+    inside GymMate where available.
+  </p>
+
+  <h2>Purchases and Subscriptions</h2>
+  <p>
+    If GymMate offers Apple-billed purchases or subscriptions, they are processed through
+    Apple&apos;s App Store. Subscription management, cancellations, and refund requests are handled
+    through the user&apos;s Apple ID account and Apple&apos;s App Store settings.
+  </p>
+  <p>
+    To manage or cancel an Apple-billed subscription, open iOS Settings -> Apple Account ->
+    Subscriptions. Refund requests for Apple-billed purchases are handled by Apple through <a
+      href="https://reportaproblem.apple.com/"
+      >reportaproblem.apple.com</a
+    >.
+  </p>
+
+  <h2>Legal Documents</h2>
+  <ul>
+    <li><a href={`${base}apps/${app.slug}/privacy-policy/`}>Privacy Policy</a></li>
+    <li><a href={`${base}apps/${app.slug}/terms-of-use/`}>Terms of Use</a></li>
+  </ul>
+
+  <h2>Legal Note</h2>
+  <p>
+    These documents are provided for transparency and app publication workflows. They are not a
+    substitute for legal advice from a qualified professional.
+  </p>
+</LegalLayout>
