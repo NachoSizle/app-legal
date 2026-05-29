@@ -41,8 +41,8 @@ const app = getAppBySlug('gymmate')
     GymMate may process the following information only when you enable or use the related feature:
     Sign in with Apple or Google sign-in information, Apple Health and Apple Watch workout data,
     push notification subscriptions, local notification settings, device and browser information,
-    product analytics events, crash and error diagnostics, AI program parsing input, offline sync
-    queue data, exported files, and share sheet data.
+    product analytics events, technical diagnostics, AI program parsing input, offline sync queue
+    data, exported files, and share sheet data.
   </p>
   <p>
     If you use Sign in with Apple, Apple may provide GymMate with your name, email address, private
@@ -95,7 +95,7 @@ const app = getAppBySlug('gymmate')
     GymMate does not use your data to track you across apps or websites owned by other companies.
   </p>
 
-  <h2>7. Analytics and Error Monitoring</h2>
+  <h2>7. Analytics and Technical Diagnostics</h2>
   <p>
     GymMate may use PostHog for product analytics. In the web/PWA experience, analytics depend on
     consent. On native platforms, consent may be treated as accepted by the app configuration. PostHog
@@ -103,9 +103,9 @@ const app = getAppBySlug('gymmate')
     onboarding, workout logging, navigation, performance, and feature adoption.
   </p>
   <p>
-    GymMate may use Sentry for crash and error monitoring when configured. Error reports may include
-    technical diagnostics such as app version, environment, device or browser information, route
-    context, stack traces, and account identifiers needed to debug reliability issues.
+    GymMate may process technical diagnostics such as app version, environment, device or browser
+    information, route context, and account identifiers needed to debug reliability issues and
+    respond to support requests.
   </p>
 
   <h2>8. AI Program Parsing</h2>
@@ -137,7 +137,7 @@ const app = getAppBySlug('gymmate')
   </p>
   <p>
     GymMate may use Google sign-in and Google Gemini for the optional AI parsing feature. GymMate may
-    use PostHog for analytics and Sentry for crash/error monitoring as described above.
+    use PostHog for analytics as described above.
   </p>
 
   <h2>11. Purchases and Subscriptions</h2>
@@ -168,7 +168,7 @@ const app = getAppBySlug('gymmate')
   <h2>14. Security</h2>
   <p>
     GymMate relies on Apple platform security, Supabase security controls, local device protections,
-    and provider security controls for account, sync, analytics, error monitoring, and notification
+    and provider security controls for account, sync, analytics, diagnostics, and notification
     services. No method of storage or transmission is completely secure, so you should protect your
     device, Apple ID, Google account where used, GymMate account, and any exported files.
   </p>
